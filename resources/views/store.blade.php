@@ -9,5 +9,19 @@
 </head>
 <body>
 
+    <div>
+@foreach($city as $item)
+        <div>
+            latitude: {{$item['latitude']}}
+        </div>
+        <div>
+            longitude: {{$item['longitude']}}
+        </div>
+        <div>
+            time zone: {{$item['time_zone']}}
+        </div>
+@endforeach
+    </div>
+
 </body>
 </html>

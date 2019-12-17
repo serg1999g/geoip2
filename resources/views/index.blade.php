@@ -11,8 +11,9 @@
 
 <form action="{{ route('store') }}" method="post">
     {{ csrf_field() }}
+    <label for="ip">Enter ip address</label>
     <input type="text" name="ip">
-    <button>dsa</button>
+    <button>Get location</button>
 </form>
 
 </body>

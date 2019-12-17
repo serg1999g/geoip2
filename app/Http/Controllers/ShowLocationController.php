@@ -29,8 +29,10 @@ class ShowLocationController extends Controller
     public function store(Request $request)
     {
         $ip = $request->ip;
-        $city = $this->locationService->getCityByIp($ip);
+        $location = $this->locationService->getCityByIp($ip);
+        $city[] = $location->location->jsonSerialize();
+//        dd($city);
 
-        dd($city);
+        return view('store', ['city' => $city]);
     }
 }
