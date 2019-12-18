@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Map</h2>
-        dasdasdd
+
         <div v-for="url in urldata">
             <div>
                 {{url.latitude}}
@@ -25,7 +25,6 @@
         ],
         mounted() {
             this.update();
-            console.log(`kek`);
         },
         methods: {
           update: function () {

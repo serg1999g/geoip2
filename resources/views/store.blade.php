@@ -26,8 +26,6 @@
             <geo-location :urldata="{{json_encode($city)}}"></geo-location>
         </div>
 
-        <example-component></example-component>
-
     </div>
     <script src="{{asset('js/app.js')}}"></script>
 </body>

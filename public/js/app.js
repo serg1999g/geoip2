@@ -1894,7 +1894,6 @@ __webpack_require__.r(__webpack_exports__);
   props: ['urldata'],
   mounted: function mounted() {
     this.update();
-    console.log("kek");
   },
   methods: {
     update: function update() {
@@ -37348,7 +37347,7 @@ var render = function() {
     "div",
     [
       _c("h2", [_vm._v("Map")]),
-      _vm._v("\n    dasdasdd\n    "),
+      _vm._v(" "),
       _vm._l(_vm.urldata, function(url) {
         return _c("div", [
           _c("div", [
