@@ -31,7 +31,6 @@ class ShowLocationController extends Controller
         $ip = $request->ip;
         $location = $this->locationService->getCityByIp($ip);
         $city[] = $location->location->jsonSerialize();
-//        dd($city);
 
         return view('store', ['city' => $city]);
     }
