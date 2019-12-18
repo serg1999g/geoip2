@@ -2,15 +2,19 @@
     <div>
         <h2>Map</h2>
 
-        <div v-for="url in urldata">
             <div>
-                {{url.latitude}}
+                {{urldata[0].latitude}}
             </div>
             <div>
-                {{url.longitude}}
+                {{urldata[0].longitude}}
             </div>
             <div>
-                {{url.time_zone}}
+                {{urldata[0].time_zone}}
+            </div>
+
+        <div class="map">
+            <div>
+                <Map :lat="urldata[0].latitude" :lon="urldata[0].longitude"/>
             </div>
         </div>
 
@@ -19,21 +23,29 @@
 
 <script>
 
+    import Map from './Map'
     export default {
-        props: [
-          'urldata'
-        ],
+
+        props: {
+            urldata: Array,
+        },
+        components: {
+            Map,
+        },
         mounted() {
             this.update();
         },
         methods: {
           update: function () {
-              console.log(`urldata`, this.urldata);
+              console.log(`methods`, this.urldata);
           }
         },
     }
 </script>
 
 <style scoped>
-
+    .map {
+        display: flex;
+        justify-content: center;
+    }
 </style>
