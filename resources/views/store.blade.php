@@ -10,8 +10,8 @@
 </head>
 <body>
 
-    <div id="app">
-@foreach($city as $item)
+<div id="app">
+    @foreach($city as $item)
         <div>
             latitude: {{$item['latitude']}}
         </div>
@@ -21,13 +21,13 @@
         <div>
             time zone: {{$item['time_zone']}}
         </div>
-@endforeach
+    @endforeach
 
-        <div>
-            <geo-location :urldata="{{json_encode($city)}}"></geo-location>
-        </div>
-
+    <div>
+        <geo-location :urldata="{{json_encode($city)}}"></geo-location>
     </div>
-    <script src="{{asset('js/app.js')}}"></script>
+
+</div>
+<script src="{{asset('js/app.js')}}"></script>
 </body>
 </html>

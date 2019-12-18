@@ -2,20 +2,18 @@
     <div>
         <h2>Map</h2>
 
-            <div>
-                {{urldata[0].latitude}}
-            </div>
-            <div>
-                {{urldata[0].longitude}}
-            </div>
-            <div>
-                {{urldata[0].time_zone}}
-            </div>
+        <div>
+            {{urldata[0].latitude}}
+        </div>
+        <div>
+            {{urldata[0].longitude}}
+        </div>
+        <div>
+            {{urldata[0].time_zone}}
+        </div>
 
         <div class="map">
-            <div>
-                <Map :lat="urldata[0].latitude" :lon="urldata[0].longitude"/>
-            </div>
+            <Map :lat="urldata[0].latitude" :lon="urldata[0].longitude"/>
         </div>
 
     </div>
@@ -24,6 +22,7 @@
 <script>
 
     import Map from './Map'
+
     export default {
 
         props: {
@@ -36,15 +35,16 @@
             this.update();
         },
         methods: {
-          update: function () {
-              console.log(`methods`, this.urldata);
-          }
+            update: function () {
+                console.log(`methods`, this.urldata);
+            }
         },
     }
 </script>
 
 <style scoped>
     .map {
+        margin-top: 100px;
         display: flex;
         justify-content: center;
     }

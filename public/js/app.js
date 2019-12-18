@@ -1893,8 +1893,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -1925,7 +1923,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue2_leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue2-leaflet */ "./node_modules/vue2-leaflet/dist/vue2-leaflet.es.js");
-//
 //
 //
 //
@@ -6500,7 +6497,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.map[data-v-c0f5abea] {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n}\n", ""]);
+exports.push([module.i, "\n.map[data-v-c0f5abea] {\n    margin-top: 100px;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n}\n", ""]);
 
 // exports
 
@@ -6519,7 +6516,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.vue2leaflet-map[data-v-479a2f41] {\n    height: 500px;\n    width: 500px;\n}\n", ""]);
+exports.push([module.i, "\n.vue2leaflet-map[data-v-479a2f41] {\n    height: 500px;\n    width: 1000px;\n}\n", ""]);
 
 // exports
 
@@ -52184,31 +52181,27 @@ var render = function() {
     _c("h2", [_vm._v("Map")]),
     _vm._v(" "),
     _c("div", [
-      _vm._v("\n            " + _vm._s(_vm.urldata[0].latitude) + "\n        ")
+      _vm._v("\n        " + _vm._s(_vm.urldata[0].latitude) + "\n    ")
     ]),
     _vm._v(" "),
     _c("div", [
-      _vm._v("\n            " + _vm._s(_vm.urldata[0].longitude) + "\n        ")
+      _vm._v("\n        " + _vm._s(_vm.urldata[0].longitude) + "\n    ")
     ]),
     _vm._v(" "),
     _c("div", [
-      _vm._v("\n            " + _vm._s(_vm.urldata[0].time_zone) + "\n        ")
+      _vm._v("\n        " + _vm._s(_vm.urldata[0].time_zone) + "\n    ")
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "map" }, [
-      _c(
-        "div",
-        [
-          _c("Map", {
-            attrs: {
-              lat: _vm.urldata[0].latitude,
-              lon: _vm.urldata[0].longitude
-            }
-          })
-        ],
-        1
-      )
-    ])
+    _c(
+      "div",
+      { staticClass: "map" },
+      [
+        _c("Map", {
+          attrs: { lat: _vm.urldata[0].latitude, lon: _vm.urldata[0].longitude }
+        })
+      ],
+      1
+    )
   ])
 }
 var staticRenderFns = []
@@ -52235,7 +52228,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "test" },
     [
       _c(
         "l-map",

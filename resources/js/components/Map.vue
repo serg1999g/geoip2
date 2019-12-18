@@ -1,18 +1,18 @@
 <template>
 
-
-<div class="test">
+    <div>
         <l-map :zoom="zoom" :center="center">
             <l-tile-layer :url="url"></l-tile-layer>
             <l-marker :lat-lng="marker"></l-marker>
         </l-map>
-</div>
+    </div>
 
 </template>
 
 <script>
 
-    import { LMap, LTileLayer, LMarker } from "vue2-leaflet";
+    import {LMap, LTileLayer, LMarker} from "vue2-leaflet";
+
     export default {
         name: 'Map',
         components: {
@@ -22,9 +22,9 @@
         },
         data() {
             return {
-                zoom:13,
+                zoom: 13,
                 center: L.latLng(this.$attrs.lat, this.$attrs.lon),
-                url:'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+                url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
                 marker: L.latLng(this.$attrs.lat, this.$attrs.lon),
             }
         },
@@ -34,6 +34,6 @@
 <style scoped>
     .vue2leaflet-map {
         height: 500px;
-        width: 500px;
+        width: 1000px;
     }
 </style>

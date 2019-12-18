@@ -11,11 +11,5 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
-
-
 Route::get('/', 'ShowLocationController@index')->name('index');
 Route::post('/store', 'ShowLocationController@store')->name('store');
