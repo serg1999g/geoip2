@@ -1,20 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+@extends('layout')
 
-<form action="{{ route('store') }}" method="post">
-    {{ csrf_field() }}
-    <label for="ip">Enter ip address</label>
-    <input type="text" name="ip">
-    <button>Get location</button>
-</form>
 
-</body>
-</html>
+@section('content')
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <form action="{{ route('store') }}" method="post">
+                    {{ csrf_field() }}
+                    <label for="ip">Enter ip address</label>
+                    <input type="text" name="ip">
+                    <button>Get location</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+@endsection
+
