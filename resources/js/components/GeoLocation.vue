@@ -13,7 +13,7 @@
         </div>
 
         <div class="map">
-            <Map :lat="urldata[0].latitude" :lon="urldata[0].longitude"/>
+            <Map :lat="urldata[0].latitude" :lng="urldata[0].longitude"/>
         </div>
 
     </div>

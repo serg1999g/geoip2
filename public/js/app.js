@@ -1945,9 +1945,9 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       zoom: 13,
-      center: L.latLng(this.$attrs.lat, this.$attrs.lon),
+      center: L.latLng(this.$attrs.lat, this.$attrs.lng),
       url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
-      marker: L.latLng(this.$attrs.lat, this.$attrs.lon)
+      marker: L.latLng(this.$attrs.lat, this.$attrs.lng)
     };
   }
 });
@@ -17239,6 +17239,39 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
+
+/***/ }),
+
+/***/ "./node_modules/leaflet/dist/images/marker-icon-2x.png":
+/*!*************************************************************!*\
+  !*** ./node_modules/leaflet/dist/images/marker-icon-2x.png ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/vendor/leaflet/dist/marker-icon-2x.png?401d815dc206b8dc1b17cd0e37695975";
+
+/***/ }),
+
+/***/ "./node_modules/leaflet/dist/images/marker-icon.png":
+/*!**********************************************************!*\
+  !*** ./node_modules/leaflet/dist/images/marker-icon.png ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/vendor/leaflet/dist/marker-icon.png?2273e3d8ad9264b7daa5bdbf8e6b47f8";
+
+/***/ }),
+
+/***/ "./node_modules/leaflet/dist/images/marker-shadow.png":
+/*!************************************************************!*\
+  !*** ./node_modules/leaflet/dist/images/marker-shadow.png ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/vendor/leaflet/dist/marker-shadow.png?44a526eed258222515aa21eaffd14a96";
 
 /***/ }),
 
@@ -52197,7 +52230,7 @@ var render = function() {
       { staticClass: "map" },
       [
         _c("Map", {
-          attrs: { lat: _vm.urldata[0].latitude, lon: _vm.urldata[0].longitude }
+          attrs: { lat: _vm.urldata[0].latitude, lng: _vm.urldata[0].longitude }
         })
       ],
       1
@@ -75571,9 +75604,13 @@ module.exports = function(module) {
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -75599,7 +75636,16 @@ Vue.component('geo-location', __webpack_require__(/*! ./components/GeoLocation *
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+//fix marker on map leaflet
 
+
+delete leaflet__WEBPACK_IMPORTED_MODULE_0__["Icon"].Default.prototype._getIconUrl;
+leaflet__WEBPACK_IMPORTED_MODULE_0__["Icon"].Default.imagePath = '.';
+leaflet__WEBPACK_IMPORTED_MODULE_0__["Icon"].Default.mergeOptions({
+  iconRetinaUrl: __webpack_require__(/*! leaflet/dist/images/marker-icon-2x.png */ "./node_modules/leaflet/dist/images/marker-icon-2x.png"),
+  iconUrl: __webpack_require__(/*! leaflet/dist/images/marker-icon.png */ "./node_modules/leaflet/dist/images/marker-icon.png"),
+  shadowUrl: __webpack_require__(/*! leaflet/dist/images/marker-shadow.png */ "./node_modules/leaflet/dist/images/marker-shadow.png")
+});
 var app = new Vue({
   el: '#app'
 });

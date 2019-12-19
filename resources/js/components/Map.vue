@@ -20,12 +20,13 @@
             LTileLayer,
             LMarker
         },
+
         data() {
             return {
                 zoom: 13,
-                center: L.latLng(this.$attrs.lat, this.$attrs.lon),
+                center: L.latLng(this.$attrs.lat, this.$attrs.lng),
                 url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
-                marker: L.latLng(this.$attrs.lat, this.$attrs.lon),
+                marker: L.latLng(this.$attrs.lat, this.$attrs.lng),
             }
         },
     }
