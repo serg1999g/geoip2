@@ -75510,19 +75510,18 @@ module.exports = function(module) {
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // utils
+
+
+__webpack_require__(/*! ./utils/customMarkerLeaflet */ "./resources/js/utils/customMarkerLeaflet.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
@@ -75542,16 +75541,7 @@ Vue.component('map-component', __webpack_require__(/*! ./components/Map */ "./re
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-//fix marker on map leaflet
 
-
-delete leaflet__WEBPACK_IMPORTED_MODULE_0__["Icon"].Default.prototype._getIconUrl;
-leaflet__WEBPACK_IMPORTED_MODULE_0__["Icon"].Default.imagePath = '.';
-leaflet__WEBPACK_IMPORTED_MODULE_0__["Icon"].Default.mergeOptions({
-  iconRetinaUrl: __webpack_require__(/*! leaflet/dist/images/marker-icon-2x.png */ "./node_modules/leaflet/dist/images/marker-icon-2x.png"),
-  iconUrl: __webpack_require__(/*! leaflet/dist/images/marker-icon.png */ "./node_modules/leaflet/dist/images/marker-icon.png"),
-  shadowUrl: __webpack_require__(/*! leaflet/dist/images/marker-shadow.png */ "./node_modules/leaflet/dist/images/marker-shadow.png")
-});
 var app = new Vue({
   el: '#app'
 });
@@ -75779,6 +75769,29 @@ var LeafletService = {
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (LeafletService);
+
+/***/ }),
+
+/***/ "./resources/js/utils/customMarkerLeaflet.js":
+/*!***************************************************!*\
+  !*** ./resources/js/utils/customMarkerLeaflet.js ***!
+  \***************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
+//fix marker on map leaflet
+
+delete leaflet__WEBPACK_IMPORTED_MODULE_0__["Icon"].Default.prototype._getIconUrl;
+leaflet__WEBPACK_IMPORTED_MODULE_0__["Icon"].Default.imagePath = '.';
+leaflet__WEBPACK_IMPORTED_MODULE_0__["Icon"].Default.mergeOptions({
+  iconRetinaUrl: __webpack_require__(/*! leaflet/dist/images/marker-icon-2x.png */ "./node_modules/leaflet/dist/images/marker-icon-2x.png"),
+  iconUrl: __webpack_require__(/*! leaflet/dist/images/marker-icon.png */ "./node_modules/leaflet/dist/images/marker-icon.png"),
+  shadowUrl: __webpack_require__(/*! leaflet/dist/images/marker-shadow.png */ "./node_modules/leaflet/dist/images/marker-shadow.png")
+});
 
 /***/ }),
 

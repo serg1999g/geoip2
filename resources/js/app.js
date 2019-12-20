@@ -6,6 +6,10 @@
 
 require('./bootstrap');
 
+// utils
+require('./utils/customMarkerLeaflet');
+
+
 window.Vue = require('vue');
 
 /**
@@ -26,20 +30,6 @@ Vue.component('map-component', require('./components/Map').default);
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
-
-//fix marker on map leaflet
-
-import {Icon} from 'leaflet'
-
-delete Icon.Default.prototype._getIconUrl;
-
-Icon.Default.imagePath = '.';
-Icon.Default.mergeOptions({
-    iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
-    iconUrl: require('leaflet/dist/images/marker-icon.png'),
-    shadowUrl: require('leaflet/dist/images/marker-shadow.png')
-});
 
 
 const app = new Vue({

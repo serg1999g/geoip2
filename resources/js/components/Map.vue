@@ -15,7 +15,7 @@
 
     export default {
         props: {
-          coordinates: Object,
+            coordinates: Object,
         },
         name: 'Map',
         components: {
