@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dac37c93-e5ba-4846-9810-5199fe44b42f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ShowLocationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ShowLocationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Contracts/GeoIpClientInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Contracts/GeoIpClientInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/LocationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/LocationService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Map.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Map.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +189,7 @@
       <workItem from="1576574011871" duration="13213000" />
       <workItem from="1576655508905" duration="24938000" />
       <workItem from="1576746615069" duration="14623000" />
-      <workItem from="1576833339945" duration="20971000" />
+      <workItem from="1576833339945" duration="22955000" />
     </task>
     <servers />
   </component>
@@ -244,10 +242,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2525" y="275" width="710" height="528" key="find.popup/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1576250999473" />
-    <state x="2544" y="246" key="run.anything.popup" timestamp="1576678203984">
+    <state x="2544" y="246" key="run.anything.popup" timestamp="1576855439355">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2544" y="246" key="run.anything.popup/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1576678203984" />
+    <state x="2544" y="246" key="run.anything.popup/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1576855439355" />
     <state x="2544" y="185" width="672" height="676" key="search.everywhere.popup" timestamp="1576674894536">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

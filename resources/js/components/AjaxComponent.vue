@@ -11,7 +11,7 @@
 </template>
 
 <script>
-    import MapComponent from './Map'
+    import MapComponent from './MapComponent'
     import LeafletService from '../services/LeafletService';
 
     export default {

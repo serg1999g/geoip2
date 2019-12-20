@@ -24,7 +24,7 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('ajax-component', require('./components/AjaxComponent').default);
-Vue.component('map-component', require('./components/Map').default);
+Vue.component('map-component', require('./components/MapComponent').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

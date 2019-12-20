@@ -10,14 +10,12 @@
 </template>
 
 <script>
-
     import {LMap, LTileLayer, LMarker} from "vue2-leaflet";
 
     export default {
         props: {
             coordinates: Object,
         },
-        name: 'Map',
         components: {
             LMap,
             LTileLayer,
