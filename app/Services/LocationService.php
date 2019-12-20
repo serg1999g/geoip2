@@ -25,7 +25,7 @@ class LocationService implements LocationServiceInterface
      */
     public function getCityByIp(string $ip): City
     {
-       return $this->geoIpClient->getCityByIp($ip);
+        return $this->geoIpClient->getCityByIp($ip);
     }
 }
 

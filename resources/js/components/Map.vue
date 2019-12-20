@@ -14,19 +14,29 @@
     import {LMap, LTileLayer, LMarker} from "vue2-leaflet";
 
     export default {
+        props: {
+          coordinates: Object,
+        },
         name: 'Map',
         components: {
             LMap,
             LTileLayer,
             LMarker
         },
-
+        watch: {
+            coordinates(newValue) {
+                if (newValue.lng && newValue.lat) {
+                    this.center = L.latLng(newValue.lat, newValue.lng);
+                    this.marker = L.latLng(newValue.lat, newValue.lng);
+                }
+            },
+        },
         data() {
             return {
-                zoom: 13,
-                center: L.latLng(this.$attrs.lat, this.$attrs.lng),
+                zoom: 7,
+                center: L.latLng(this.coordinates.lat || 47.8555, this.coordinates.lng || 35.2916),
                 url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
-                marker: L.latLng(this.$attrs.lat, this.$attrs.lng),
+                marker: L.latLng(this.coordinates.lat || 47.8555, this.coordinates.lng || 35.2916),
             }
         },
     }

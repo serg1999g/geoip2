@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Services\Contracts;
 
 use GeoIp2\Model\City;

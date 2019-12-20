@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\IpRequest;
 use Illuminate\Http\Request;
 use App\Services\Contracts\LocationServiceInterface;
 
@@ -26,12 +27,12 @@ class ShowLocationController extends Controller
         return view('index');
     }
 
-    public function store(Request $request)
+    public function store(IpRequest $request)
     {
         $ip = $request->ip;
         $location = $this->locationService->getCityByIp($ip);
         $city[] = $location->location->jsonSerialize();
 
-        return view('store', ['city' => $city]);
+        return response()->json($city);
     }
 }

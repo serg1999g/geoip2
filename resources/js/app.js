@@ -19,7 +19,8 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('geo-location', require('./components/GeoLocation').default);
+Vue.component('ajax-component', require('./components/AjaxComponent').default);
+Vue.component('map-component', require('./components/Map').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -27,10 +28,9 @@ Vue.component('geo-location', require('./components/GeoLocation').default);
  */
 
 
-
 //fix marker on map leaflet
 
-import { Icon } from 'leaflet'
+import {Icon} from 'leaflet'
 
 delete Icon.Default.prototype._getIconUrl;
 
@@ -40,7 +40,6 @@ Icon.Default.mergeOptions({
     iconUrl: require('leaflet/dist/images/marker-icon.png'),
     shadowUrl: require('leaflet/dist/images/marker-shadow.png')
 });
-
 
 
 const app = new Vue({

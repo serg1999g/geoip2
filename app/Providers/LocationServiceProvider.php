@@ -17,8 +17,8 @@ class LocationServiceProvider extends ServiceProvider
     {
         $this->app->bind('App\Services\Contracts\LocationServiceInterface', 'App\Services\LocationService');
 
-        $this->app->bind('GeoIp2\Database\Reader', function(){
-            return new Reader(public_path().'/storage/'. config('geoip.get-ip'));
+        $this->app->bind('GeoIp2\Database\Reader', function () {
+            return new Reader(public_path() . '/storage/' . config('geoip.get-ip'));
         });
 
         $this->app->bind('App\Services\Contracts\GeoIpClientInterface', 'App\Clients\GeoIpClient');
