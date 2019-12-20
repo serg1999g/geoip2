@@ -6,6 +6,10 @@ use GeoIp2\Database\Reader;
 use Illuminate\Support\ServiceProvider;
 
 
+/**
+ * Class LocationServiceProvider
+ * @package App\Providers
+ */
 class LocationServiceProvider extends ServiceProvider
 {
     /**

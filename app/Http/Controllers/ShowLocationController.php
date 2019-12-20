@@ -17,16 +17,27 @@ class ShowLocationController extends Controller
      */
     private $locationService;
 
+    /**
+     * ShowLocationController constructor.
+     * @param LocationServiceInterface $locationService
+     */
     public function __construct(LocationServiceInterface $locationService)
     {
         $this->locationService = $locationService;
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index()
     {
         return view('index');
     }
 
+    /**
+     * @param IpRequest $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function store(IpRequest $request)
     {
         $ip = $request->ip;

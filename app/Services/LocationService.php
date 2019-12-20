@@ -13,8 +13,15 @@ use App\Services\Contracts\GeoIpClientInterface;
  */
 class LocationService implements LocationServiceInterface
 {
+    /**
+     * @var GeoIpClientInterface
+     */
     private $geoIpClient;
 
+    /**
+     * LocationService constructor.
+     * @param GeoIpClientInterface $geoIpClient
+     */
     public function __construct(GeoIpClientInterface $geoIpClient)
     {
         $this->geoIpClient = $geoIpClient;
